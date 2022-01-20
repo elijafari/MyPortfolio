@@ -1,0 +1,191 @@
+.nameElham {
+  color: orange;
+}
+
+h1 {
+  margin: 10px 0 50px 0;
+}
+
+.welcome {
+  position: relative;
+  margin-top: 10px;
+}
+
+.custom-btn {
+  background-color: #4e4e4e;
+  color: white;
+}
+
+.custom-btn:hover {
+  color: #f5a431;
+}
+
+.imgdeveloper {
+  width: 350px;
+  margin-top: 90px;
+}
+
+section {
+  margin: 50px 0;
+}
+
+h2 {
+  margin-bottom: 50px;
+}
+
+.experience {
+  text-align: center;
+}
+
+/* The timeline */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* The actual timeline (the vertical ruler) */
+}
+
+.timeline:after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #f5a431;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.containertime {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  /* The circles on the timeline */
+}
+
+.containertime:after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #ff9f55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+  /* Add arrows to the left container (pointing right) */
+}
+
+.left:before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #cacaca;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #cacaca;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+  /* Fix the circle for containers on the right side */
+}
+
+.right:before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #cacaca;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #cacaca transparent transparent;
+}
+
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: #cacaca;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+  /* Full-width containers */
+  .containertime {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  .containertime::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  /* Make sure all circles are at the same spot */
+  .left::after,
+  .right::after {
+    left: 15px;
+  }
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+
+.submitbtn {
+  background-color: #ff9f55;
+  color: white;
+}
+
+.navStick {
+  position: fixed;
+  top: 0;
+  width: 80%;
+  z-index: 2;
+}
+
+.contactbox {
+  background-color: #cacaca;
+  width: 400px;
+  color: white;
+}
+
+footer {
+  background-color: #f8f9fa;
+  height: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  margin-left: 10%;
+}
+
+hr {
+  width: 80%;
+}
+/*# sourceMappingURL=style.css.map */
